@@ -7,13 +7,13 @@
 Summary:	aliased - Use shorter versions of class names.
 Summary(pl.UTF-8):	aliased - używaj krótszej wersji nazw klas.
 Name:		perl-aliased
-Version:	0.22
+Version:	0.30
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/O/OV/OVID/%{pdir}-%{version}.tar.gz
-# Source0-md5:	06cace025aa108fe4a9af3ae26bb297e
+# Source0-md5:	8c2ee486901dae7d1c31e9a2d69c6c8f
 URL:		http://search.cpan.org/dist/aliased/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
