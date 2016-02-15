@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define	pdir	aliased
+%include	/usr/lib/rpm/macros.perl
 Summary:	aliased - use shorter versions of class names
 Summary(pl.UTF-8):	aliased - używanie krótszych wersji nazw klas
 Name:		perl-aliased
-Version:	0.30
+Version:	0.34
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/O/OV/OVID/%{pdir}-%{version}.tar.gz
-# Source0-md5:	8c2ee486901dae7d1c31e9a2d69c6c8f
+Source0:	http://search.cpan.org/CPAN/authors/id/E/ET/ETHER/%{pdir}-%{version}.tar.gz
+# Source0-md5:	f7f659f689699a87115da1262eb6edc6
 URL:		http://search.cpan.org/dist/aliased/
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -65,17 +65,15 @@ nazwą, a także w przypadku, kiedy nazwa klasy została zmieniona.
 %setup -q -n %{pdir}-%{version}
 
 %build
-%{__perl} Build.PL \
-	destdir=$RPM_BUILD_ROOT \
-	installdirs=vendor
-./Build
-
-%{?with_tests:./Build test}
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor
+%{__make}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
-./Build install
+%{__make} pure_install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
