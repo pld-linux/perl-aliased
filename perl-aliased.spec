@@ -3,7 +3,6 @@
 %bcond_without	tests		# do not perform "make test"
 
 %define	pdir	aliased
-%include	/usr/lib/rpm/macros.perl
 Summary:	aliased - use shorter versions of class names
 Summary(pl.UTF-8):	aliased - używanie krótszych wersji nazw klas
 Name:		perl-aliased
