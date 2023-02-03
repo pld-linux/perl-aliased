@@ -11,12 +11,13 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://search.cpan.org/CPAN/authors/id/E/ET/ETHER/%{pdir}-%{version}.tar.gz
+Source0:	https://www.cpan.org/modules/by-authors/id/E/ET/ETHER/%{pdir}-%{version}.tar.gz
 # Source0-md5:	f7f659f689699a87115da1262eb6edc6
-URL:		http://search.cpan.org/dist/aliased/
-BuildRequires:	perl-Module-Build
+URL:		https://metacpan.org/dist/aliased
+BuildRequires:	perl-Module-Build-Tiny >= 0.039
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
 BuildRequires:	perl-Test-Simple
 %endif
