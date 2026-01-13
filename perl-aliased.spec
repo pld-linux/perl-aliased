@@ -7,7 +7,7 @@ Summary:	aliased - use shorter versions of class names
 Summary(pl.UTF-8):	aliased - używanie krótszych wersji nazw klas
 Name:		perl-aliased
 Version:	0.34
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
